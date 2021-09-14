@@ -420,10 +420,14 @@ section.options-footer {
     flex-wrap: wrap;
 }
 .prod-1 > figure{
-    width: 540px;
-    height: 433px;
-    background: #F7F8FA;}
+    width: 100%;
+    background: #F7F8FA;
+    margin: 0;
+    }
 .prod-1 > span{
+    margin: 22px auto 114px;
+    font-size: 22px;
+    line-height: 26px;
     width: 100%;
 }
 .prod-1 > span > strong{
@@ -460,8 +464,8 @@ section.options-footer {
     letter-spacing: -0.9px;
     color: #56B280;
     width: 80px;
-    justify-content: center;
     margin-bottom: 24px;
+    line-height: 58px;
 }
 .custo > .quantidade{
     text-align: center;
@@ -484,8 +488,13 @@ input#qntd {
     border: 1px solid #56B280;
     width: 75px;
 }
+input[type="radio"] {
+    width: 16px;
+    height: 16px;
+    background: #87D6AC;
+}
 .quantidade > label{
-    margin-bottom: 5%;
+    margin-bottom: 9px;
 }
 .soma{
     width: 75px;
@@ -497,10 +506,11 @@ input#qntd {
     flex-flow: row nowrap;
 }
 .soma .mais {
+    display: block;
     position: absolute;
-    width: 20px;
     flex-grow: 1;
     left: 10px;
+    color: #56B280;
 }
 .soma a {
     cursor: pointer;
@@ -513,6 +523,7 @@ input#qntd {
     width: 20px;
     flex-grow: 1;
     right: 10px;
+    color: #56B280;
 }
 .frete{
     font-size: 14px;
@@ -522,8 +533,8 @@ input#qntd {
     padding: 0; 
 }
 .opt1 {
-    margin-left: 10px;
-    padding: 10px;
+    text-align: left;
+    margin: 18px 20px;
 }
 .frete .opt2{
     padding: 18px 20px;
@@ -542,7 +553,7 @@ width: 75px;
 height: 20px;
 border: 1px solid #E7E7E7;
 }
-.subscribe p {margin-bottom: 0;}
+.subscribe p {color: #818181;margin-bottom: 0;}
 .subscribe p a {
     color: #87D6AC;
 }
@@ -586,6 +597,7 @@ article.details ul {
     font-weight: 700;
     color: black;
 }
+.prod{margin: 0;}
 /* Cart */
 .CartS{display: flex;}
 .cartitns{
@@ -730,7 +742,7 @@ a.button-check{
     }
 @media screen and (max-width: 900px) {
     .desktop{display: none ;}
-    .mobile{display: block ;}
+    h2.mobile{margin-top: 74px;font-size: 26px;line-height: 58px;display: flex;}
     header{position: fixed;z-index: 2;}
     header h1{text-align: center;width: 200px;}
     .user-menu{
@@ -934,9 +946,9 @@ a.button-check{
 
     .prod-1 > figure{
         width: 100%;
-        height: 277px;
     }
     .custoxfrete{
+        margin: 14px auto;
         display: flex;
         flex-direction: column;
     }
@@ -950,7 +962,7 @@ a.button-check{
         margin: 25px auto;
     }
     .frete .opt2{
-        margin: 8px auto;
+        margin-bottom: 25px;
     }
     .comprar{
         margin: 25px auto 0;
