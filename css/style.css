@@ -17,7 +17,6 @@
 *{margin: 0;padding: 0;border: 0;}
 li{list-style:none;}
 strong{font-weight:bold;}
-/* img{background: #F7F8FA; width: 100%;} */
 a,
 a:hover{color:#000;text-decoration:none;cursor:pointer;}
 input:focus{outline: 0;border: 0;}
@@ -94,52 +93,51 @@ main > .banner{
     background-position: center;
 }
 .card-bg{
-    width: 100%;
-    padding: 33px 94px 63px;
     max-width: 730px;
+    width: 100%;
     margin: 0 auto;
-    background: rgba(247, 248, 250, 0.8);
+    background: rgba(247, 248, 250, 0.5);
     backdrop-filter: blur(24px);
     border-radius: 2px;
 }
 .card-bg .text-bg{
-    width: 100%;
     display: flex;
-    text-align: center;
-    align-items: center;
-    justify-content: center;
-    margin: 0px auto;
+    margin: 33px 95px 45px;
     flex-direction: column;
 }
 
 .text-bg > h2{
     width: 100%;
-    line-height: 58px;
+    line-height: 56px;
     margin: 0 auto;
     color: #1D252C;
 }
 .text-bg > p{
     width: 100%;
-    padding-bottom: 45px;
     font-family: Helvetica;
     font-size: 18px;
     font-style: normal;
-    margin: 0;
-    line-height: 26px;
+    line-height: 28px;
+    margin: 0 auto;
 }
 .button{
+    max-width: 310px;
+    width: 100%;
+    position: relative;
+    margin: 0px auto 63px;
     font-family: 'roboto-regular';
     background: #56B280;
     border-radius: 4px;
     padding: 8px 44px;
     text-align: center;
-    width: 310px;
+    display: flex;
 }
 .button > a{
     font-family: 'roboto-regular';
-    font-size: 20px;
     line-height: 24px;
     color: #fff;
+    font-size: 20px;
+    padding: 0px 4px;
 }
 
 .subtitle{
@@ -268,8 +266,11 @@ main > .banner{
     font-size: 16px;
 }
 .clean-1 > .button{
-    width: 194px;
-    margin-top: 68px;
+    max-width: 194px;
+    margin: 68px 0px 0px;
+}
+.clean-1 > .button > a {
+    padding: 0;
 }
 figure.clean-img {
     width: 50%;
@@ -724,23 +725,26 @@ a.button-check{
 /* Thanks */
 
 @media screen and (min-width: 901px){
-.mobile{display: none ;}
-.desktop{display: block ;}
-}
+    .mobile{display: none ;}
+    .desktop{display: block ;}
+    }
 @media screen and (max-width: 900px) {
     .desktop{display: none ;}
     .mobile{display: block ;}
-    header{position: relative;z-index: 2;}
-    header h1{text-align: center;}
+    header{position: fixed;z-index: 2;}
+    header h1{text-align: center;width: 200px;}
     .user-menu{
         margin-right: 20px;
     }
     .menu-hb{
+        transition: 0.5s all ease;
         display: block;
-        margin-left: 30px;
+        margin: 0 30px;
         width: 32px;
-        height: 32px;}
+        height: 32px;
+        }
     .menu-hb span{
+        transition: 0.5s all ease;
         width: 32px;
         height: 3px;
         background: #000;
@@ -784,7 +788,7 @@ a.button-check{
         display: none;
     }
     .menu-hb span.m3-open {
-        transition: 0.5s;
+        transition: 0.5s all ease;
         transform: rotate(135deg);
         position: relative;
         margin-top: -5px;
@@ -796,18 +800,29 @@ a.button-check{
         background-image: url(../src/bg-image-m.svg);
     }
     .card-bg{
-        width: 95%;
-        padding: 35px 0 62px;
+        min-width: 300px;
+        width: 92%;
         border-radius: 4px;
     }
-    .text-bg > h2 {width: 100%;}
+    div.card-bg article.box-bg div.text-bg{
+        height: auto;
+        margin: 41px 10px 35px;
+    }
+    .text-bg > h2 {
+        margin: 0 auto 10px;
+        line-height: 48px;
+    }
+    .text-bg > p{
+        width: 92%;
+        line-height: 20px;
+    } 
     .button{
-        padding: 5px 0 5px;
-        width: 310px;
+        padding: 8px 0 8px;
         display: flex;
         align-items: center;
         justify-content: center;
-        margin: 0 auto;
+        margin: 0 auto 43px;
+        min-width: 300px;
     }
     .product{margin: 0 auto;}
     .product a{
@@ -837,6 +852,7 @@ a.button-check{
         display: flex;
         width: 92%;
         height: auto;
+        padding: 119px 0 0px;
     }
     .title-c{
         text-align: center;
@@ -845,12 +861,15 @@ a.button-check{
         order: 1;
         flex-direction: column;
     }
+    figure.clean-img{
+        width: 100%;
+    }
     .clean-img{
         width: 100%;
         order: 2;
     }
     .clean-img > img{
-        width: 340px;
+        width: 100%;
     }
     .clean-1{
         display: flex;
@@ -869,33 +888,45 @@ a.button-check{
         display: flex;
         width: 100%;
         margin: 0 auto;
-        padding-bottom: 89px;
         flex-flow: column wrap;
+        padding-bottom: 121px;
     }
-    
+    .title-popular.subtitle{
+        margin: 34px auto;
+    }
+    .box-comit{
+        align-items:center;
+    }
+    .box-comit > figure > img{
+        width: 64px;
+        height: 63px;
+    }
+    .box-comit > img{width: 111px;display: flex;margin: 0px 66px 16px 70px;}
     .title-comit{
         display: block;
         width: 98%;
-        margin: 87px auto;
+        margin: 87px auto 47px;
     }
     .comit{
+        width: 100%;
         display: flex;
-        margin: 0 auto;
+        margin: auto;
         overflow-x: scroll;
         justify-content: unset;
     }
     .box-comit{
-        width: 100%;
-        justify-content: space-between;
-        display: flex;
-        max-width: none;
-        flex-direction: column;
+        width: 267px;
+        height: 224px;
+        display: block;
+        padding: 25px 10px 0px;
     }
     .box-comit > h3{
         font-size: 18px;
+        margin: 0px auto;
     }
     .box-comit > span{
         font-size: 14px;
+        line-height: 18px;
     }
 
 
@@ -988,6 +1019,9 @@ a.button-check{
 
     /* Footer */
     .logo-footer{width: 100%;}
+    .logo-footer > figure > img{
+        width: 141px;
+    }
     .options article .options-footer{
         display: flex;
         flex-wrap: wrap;
